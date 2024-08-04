@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: black;
+}
+
+i, button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#edit-modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#edit-modal-background #edit-modal {
+  width: 400px;
+  height: 150px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  color: white;
+}
+#edit-modal-background #edit-modal .modal-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#edit-modal-background #edit-modal .modal-header #close {
+  color: gray;
+}
+#edit-modal-background #edit-modal .modal-header #close:hover {
+  color: white;
+}
+#edit-modal-background #edit-modal form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+#edit-modal-background #edit-modal form div {
+  display: flex;
+  justify-content: space-between;
+}
+#edit-modal-background #edit-modal form div input {
+  width: 60%;
+}
+#edit-modal-background #edit-modal form div:last-child {
+  justify-content: flex-end;
+  gap: 10px;
+}
+#edit-modal-background #edit-modal form div:last-child button {
+  border: none;
+  background-color: rgb(71, 71, 195);
+  color: white;
+  padding: 5px 10px;
+}
+#edit-modal-background #edit-modal form div:last-child button:first-child {
+  background-color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#modal .modal-box {
+  width: 400px;
+  height: 250px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  color: white;
+}
+#modal .modal-box .modal-header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+#modal .modal-box .modal-header .close {
+  color: gray;
+}
+#modal .modal-box .modal-header .close:hover {
+  color: white;
+}
+#modal .modal-box .modal-body {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#modal .modal-box .modal-body form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+#modal .modal-box .modal-body form div {
+  display: flex;
+  gap: 20px;
+}
+#modal .modal-box .modal-body form div select {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  outline: none;
+}
+#modal .modal-box .modal-body form div:last-child {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+#modal .modal-box .modal-body form div:last-child button {
+  border: none;
+  background-color: rgb(71, 71, 195);
+  color: white;
+  padding: 5px 20px;
+}
+#modal .modal-box .modal-body form div:last-child button:first-child {
+  background-color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+.view-modal {
+  display: flex !important;
+}
+
+#display {
+  color: white;
+  display: flex;
+  padding: 5px;
+  height: 98.5vh;
+  width: 250px;
+  overflow-x: hidden;
+  border-right: 1px solid white;
+  justify-content: flex-start;
+}
+#display #explorer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#display #explorer .explorer-entry {
+  display: flex;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+}
+#display #explorer .explorer-entry .single-entry {
+  width: 200px;
+  padding: 0px 5px !important;
+  display: flex;
+  align-items: center;
+  flex-direction: row !important;
+}
+#display #explorer .explorer-entry .single-entry .btn-group {
+  display: flex;
+  flex-direction: row !important;
+}
+#display #explorer .explorer-entry .single-entry .btn-group button {
+  background-color: black;
+  border: none;
+}
+#display #explorer .explorer-entry .single-entry .btn-group button i {
+  color: white;
+}
+#display #explorer .explorer-entry div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 4px;
+}
+#display #explorer .explorer-entry div div {
+  display: flex;
+}
+#display #explorer .explorer-entry div div button {
+  padding: 2px;
+}
+#display #explorer .explorer-entry div div button i {
+  padding-top: 3px;
+}
+
+#details {
+  color: white;
+  padding: 20px;
+}
+
+.filespan {
+  padding-left: 15px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+<div id="edit-modal-background">
+    <div id="edit-modal">
+        <div class="modal-header">
+            <h2>Edit Explorer</h2>
+            <span id="close"><i class="fa-solid fa-close close"></i></span>
+        </div>
+        
+        <form action="/edit" method="POST">
+            <div class="hidden">
+                <label for="id">id</label>
+                <input type="text" name="id" id="id">
+            </div>
+            <div>
+                <label for="prev-name">Previous Name</label>
+                <input type="text" name="prev-name" id="prev-name" readonly>
+            </div>
+            <div>
+                <label for="name">Enter Updated Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <button type="reset" id="discard">Discard</button>
+                <button type="submit">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>

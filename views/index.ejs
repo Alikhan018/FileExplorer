@@ -1,0 +1,51 @@
+<%- include('partials/head') %> <%- include('partials/modal') %> <%-
+include('partials/editModal') %>
+
+<div id="display">
+  <div id="explorer">
+    <div class="explorer-entry">
+      <% renderTree(tree.root) %> <% function renderTree(node) { %> <% if (node)
+      { %>
+      <div>
+        <div class="single-entry" id="<%= node.id %>">
+          <% if (node.type === 'directory') { %>
+          <span class="folderspan"
+            ><i class="fas fa-angle-right twister"></i>
+            <i class="fa-solid fa-folder" style="color: <%= node.color %>"></i>
+            <%= node.name %></span
+          >
+          <% } %> <% if (node.type === 'file') { %>
+          <span class="filespan"
+            ><i class="fa-solid fa-file" style="color: <%= node.color %>"></i>
+            <%= node.name %></span
+          >
+          <% } %>
+          <div class="btn-group">
+            <button type="button" class="edit">
+              <i
+                title="Rename"
+                class="fa-solid fa-edit"
+                style="color: #1d84b5"
+              ></i>
+            </button>
+            <% if (node.type === 'directory') { %>
+            <button type="button" class="addFolder">
+              <i
+                title="Add file/folder"
+                style="color: #7fb069"
+                class="fa-solid fa-add"
+              ></i>
+            </button>
+            <% } %>
+          </div>
+        </div>
+        <% node.children.forEach((item) => { %>
+        <div class="hidden"><% renderTree(item) %></div>
+        <% }) %>
+      </div>
+      <% } %> <% } %>
+    </div>
+  </div>
+</div>
+<div id="details"></div>
+<%- include('partials/footer') %>

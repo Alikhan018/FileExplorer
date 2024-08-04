@@ -1,0 +1,41 @@
+<div id="modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="heading-modal"></h2>
+        <span id="close"><i class="fa-solid fa-close close"></i></span>
+      </div>
+      <div class="modal-body">
+        <h2>Enter Details</h2>
+        <form action="/add" method="POST">
+          <div class="hidden">
+            <label for="parentId">Parent Id</label>
+            <input type="text" name="parentId" id="parentId" required readonly/>
+          </div>
+          <div>
+            <label for="name">Enter Name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div>
+            Select Type:
+            <input type="radio" name="type" id="folder" value="directory" required/>
+            <label for="folder">Folder</label>
+            <input type="radio" name="type" id="file" value="file" required />
+            <label for="folder">File</label>
+          </div>
+          <div>
+            <select name="color" id="color" required>
+              <option value="" disabled selected>--Select Color--</option>
+              <option value="#A22C29">Red</option>
+              <option value="#D5896F">Brown</option>
+              <option value="#7FB069">Green</option>
+            </select>
+          </div>
+          <div>
+
+            <button type="reset" id="cancel"></button>
+            <button type="submit" id="save"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
